@@ -230,7 +230,26 @@ class GCAuthor {
 		
 		return self::$lang;
 	}
-	
+	public static function getDataStore($ds=Array()){
+		$rel_dir=ROOT_PATH."config/ini/";
+		$db=gcApp::getDB();
+		$tmp = parse_ini_file($rel_dir."datastore.ini",true);
+		
+
+		foreach($tmp as  $key=>$dataStore){
+			if($ds==Array() || in_array($key,$ds)){
+				$fieldList=Array();
+				$otherFields="";
+				if(!empty($dataStore["fields"])) for($i=0;$i<count($dataStore["fields"]);$i++) $fieldList[]='"'.$dataStore["fields"][$i].'"';
+				if (@count($fieldList)) $otherFields=",".implode(",",$fieldList);
+				$sql="SELECT ".$dataStore["valueField"]." as value,".$dataStore["displayField"]." as label $otherFields FROM gisclient_31.".$dataStore["table"].";";
+				$stmt=$db->prepare($sql);
+				$stmt->execute();
+				$result[$key]=$stmt->fetchAll(PDO::FETCH_ASSOC);
+			}
+		}
+		return json_encode($result);
+	}
 	public static function getTabDir() {
 		$lang = self::getLang();
 		$rel_dir="config/ini/forms/";

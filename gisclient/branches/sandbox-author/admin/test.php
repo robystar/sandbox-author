@@ -1,5 +1,5 @@
 <?php
-
+/*
 $s="id:label,fields:[srid,maxscale,minscale],width:300";
 preg_match("/\[(.+)\]/",$s,$arr);
 $s=str_replace($arr[0],'@@@@@@',$s);
@@ -10,7 +10,7 @@ for($k=0;$k<count($params);$k++){
 	$ctr[$key]=$value;
 }
 
-echo "<pre>";
+echo "<pre>";*/
 /*
 $tmp=explode(":",$s);
 $result[0]=$tmp[0];
@@ -21,7 +21,12 @@ for($i=1;$i<count($tmp)-1;$i++){
 	$value=implode(",",$t);
 	$result[$i-1]=$result[$i-1].":".$value;
 }
-$result[$i-1]=$key.":".$result[$i-1];*/
+$result[$i-1]=$key.":".$result[$i-1];
 print_r($ctr);
-echo "</pre>";
+echo "</pre>";*/
+include_once "../config/config.php";
+
 ?>
+<script>
+var dataStore=<?php print GCAuthor::getDataStore(Array('seldb_conntype','seldb_catalog'));?>;
+</script>

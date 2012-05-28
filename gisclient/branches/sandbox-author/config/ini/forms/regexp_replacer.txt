@@ -1,0 +1,20 @@
+/*Sostituzione 1*/
+dato[]
+fields[]
+
+/*Sostituzione 2*/
+_standard
+
+/*Sostituzione 3*/
+_list
+
+/*Sostituzione 4*/
+#openlist#layer,
+
+/*Sostituzione 5*/
+([a-z_]*);([a-z0-9_]+);([a-z0-9_#%]*);([a-z_]+)
+id:$1,field_name:$2,width:$3,field_type:$4
+
+/*Sostituzione 6*/
+width:([0-9]+)x([0-9]+)
+cols:$1,rows:$2

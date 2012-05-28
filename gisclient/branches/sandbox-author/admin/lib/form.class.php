@@ -138,12 +138,18 @@ Class Form
 			$row=$arr[$i];
 			$cols=explode(self::objectSeparator,trim($row));
 			for($j=0;$j<count($cols);$j++){
-				$params=explode(",",$cols[$j]);
+				$params=explode(",",trim($cols[$j]));
 				for($k=0;$k<count($params);$k++){
-					list($key,$value)=explode(":",$params[$k]);
-					$ctr[$i][$j][$key]=$value;
+					list($key,$value)=explode(":",trim($params[$k]));
+					$ctr[$i][$j][trim($key)]=trim($value);
 				}
-				$ctr[$i][$j]["label"]=(in_array("label",array_keys($ctr[$i][$j])))?($ctr[$i][$j]["label"]):(self::getLabel($ctr[$i][$j]["id"]));
+				//print_array($ctr[$i][$j]);
+				try{
+					$ctr[$i][$j]["label"]=(in_array("label",array_keys($ctr[$i][$j])))?($ctr[$i][$j]["label"]):(self::getLabel($ctr[$i][$j]["id"]));
+				}
+				catch(Exception $e){
+					echo "<p>".$ctr[$i][$j]["id"]."</p>";
+				}
 				$this->controls[$ctr[$i][$j]["id"]]=$ctr[$i][$j];
 				$this->ctrPos[$i][$j]=$ctr[$i][$j];
 			}
