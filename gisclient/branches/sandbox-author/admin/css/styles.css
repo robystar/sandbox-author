@@ -1,0 +1,92 @@
+/* CSS RESET */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;text-align:left;font-family:inherit;}table{border-collapse:collapse;border-spacing:0;}ol,ul{list-style:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}
+
+/* GENERAL */
+body , html { margin: 0px; padding: 0px; font-family: Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #DDD; color: #666; }
+p { text-align: justify; margin-bottom: 5px; }
+a , .color { color: #2191c0; font-weight: bold; }
+#container input , #container_login input , #container button , a.button { font-size: 11px; }
+.shadow { font-weight: bold; color: #FFF !important; text-shadow: 0px 0px 5px #AAA; }
+hr { margin: 10px 0; border: none; border-top: 1px dashed #2191c0; }
+input , select , textarea { border: 1px solid #aaaaaa; }
+h1 , h2 { font-size: 22px; color: #2191c0; margin: 0 0 10px 0; padding: 0; }
+h2 { font-size: 18px; line-height: 18px; }
+span.alert , span.error , span.info { display: block; overflow: hidden; padding: 2px; }
+th {font-weight: bold;}
+
+/* jquery layout - PANES & CONTENT-DIVs */
+.ui-layout-pane { background: #FFF; padding: 0; overflow: auto; }
+.ui-layout-content { padding: 10px; position: relative; overflow: auto; }
+.ui-layout-north , .ui-layout-south { background-color: transparent; overflow: hidden; }
+.ui-layout-center , .ui-layout-east , .ui-layout-west { padding: 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -khtml-border-radius: 8px; border-radius: 8px; box-shadow: 0px 0px 5px #555555; -webkit-box-shadow: 0px 0px 5px #AAA; -moz-box-shadow: 0px 0px 5px #AAA; }
+.ui-layout-south { text-align: right; line-height: 20px; padding: 0 5px; }
+
+/* LAYOUT */
+#container { min-height: 300px; min-width: 980px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; padding: 10px; background-color: #DDD; }
+#container_login { position: absolute; height: 260px; width: 610px; margin: -170px 0px 0px -305px; top: 50%; left: 50%; text-align: left; padding: 0px; overflow: hidden; padding: 10px; background-color: #DDD; }
+#gisClientAuthorLogo , #clientLogo { font-size: 32px; height: 63px; float: left; width: 300px; }
+#gisClientAuthorLogo span { display: block; float: left; clear: both; font-size: 13px; text-transform: uppercase; margin-top: -5px; }
+#clientLogo { float: right; text-align: right; }
+#topMenu { float: right; clear: both; text-align: right; font-size: 10px; }
+#container_login #topMenu { display: none; }
+#frm_label { float: left; font-size: 10px; }
+
+/* LOGIN */
+#container_login .formRow , #container_login2 .formRow { display: block; clear: both; overflow: hidden; margin: 4px 0px; }
+#container_login .formRow label { display: block; float: left; width: 150px; text-align: right; padding-right: 4px; line-height: 22px; }
+#container_login2 .formRow label { display: block; }
+#container_login input#username , #container_login input#password { height: 20px; padding: 0 5px; width: 300px;  }
+#container_login2 input#username , #container_login2 input#password { height: 20px; padding: 0 5px; width: 217px;  }
+#container_login .alert { width: 306px; }
+#container_login input.submit { width: 313px; font-weight: bold; }
+#container_login2 input.submit { width: 100%; font-weight: bold; margin-top: 5px; }
+
+/* tablesHeader */
+.tableHeader { padding: 0 0 0 5px; overflow: hidden; line-height: 26px; }
+.tableHeader button { float: right; }
+
+/* TABLES */
+table { font-size: 12px; width: 100%; border-collapse: collapse; }
+tr { border-collapse: collapse; background-color: #FFF; }
+td { padding: 2px; border-collapse: collapse; }
+tr:hover { background-color: #EEE; }
+tr.ui-widget:hover { background-color: #2191c0; }
+.stiletabella { margin: 0 0 10px 0; }
+.stiletabella tr.ui-state-default { border-color: #DDD; background-color: #DDD; color: #2191c0; background-image: none; }
+.stiletabella td.label { background-color: #2191c0; background-image: none; width: 300px; text-align: right; vertical-align: top; line-height: 18px; padding-right: 4px; }
+.stiletabella tr { border: 1px solid #DDD; }
+div.dt_left{display:inline !important;padding-right:25px;float:left;}
+div.dt_right{display:inline !important;padding-left:25px;float:right;}
+div.dts_left{display:inline !important;padding-top:10px;padding-right:5px;float:left;}
+div.dts_right{display:inline !important;padding-top:10px;padding-left:5px;float:right;}
+
+
+/* Selectmenu
+----------------------------------*/
+.ui-selectmenu { display: block; display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; }
+.ui-selectmenu-icon { position:absolute; right:6px; margin-top:-8px; top: 50%; }
+.ui-selectmenu-menu { padding:0; margin:0; position:absolute; top: 0; display: none; z-index: 1005;} /* z-index: 1005 to make selectmenu work with dialog */
+.ui-selectmenu-menu  ul { padding:0; margin:0; list-style:none; position: relative; overflow: auto; overflow-y: auto ; overflow-x: hidden; } 
+.ui-selectmenu-open { display: block; }
+.ui-selectmenu-menu-popup { margin-top: -1px; }
+.ui-selectmenu-menu li { padding:0; margin:0; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0 !important; border-left-width: 0 !important; font-weight: normal !important; }
+.ui-selectmenu-menu li a,.ui-selectmenu-status { line-height: 1.4em; display: block; padding: .405em 2.1em .405em 1em; outline:none; text-decoration:none; }
+.ui-selectmenu-menu li.ui-state-disabled a, .ui-state-disabled { cursor: default; }
+.ui-selectmenu-menu li.ui-selectmenu-hasIcon a,
+.ui-selectmenu-hasIcon .ui-selectmenu-status { padding-left: 20px; position: relative; margin-left: 5px; }
+.ui-selectmenu-menu li .ui-icon, .ui-selectmenu-status .ui-icon { position: absolute; top: 1em; margin-top: -8px; left: 0; }
+.ui-selectmenu-status { line-height: 1.4em; }
+.ui-selectmenu-menu li span,.ui-selectmenu-status span { display:block; margin-bottom: .2em; }
+.ui-selectmenu-menu li .ui-selectmenu-item-header { font-weight: bold; }
+.ui-selectmenu-menu li .ui-selectmenu-item-footer { opacity: .8; }
+/* for optgroups */
+.ui-selectmenu-menu .ui-selectmenu-group { font-size: 1em; }
+.ui-selectmenu-menu .ui-selectmenu-group .ui-selectmenu-group-label { line-height: 1.1em; display:block; padding: .6em .5em 0; font-weight: normal; }
+.ui-selectmenu-menu .ui-selectmenu-group ul { margin: 0; padding: 0; }
+/* IE6 workaround (dotted transparent borders) */
+* html .ui-selectmenu-menu li { border-color: pink; filter:chroma(color=pink); width:100%; }
+* html .ui-selectmenu-menu li a { position: relative }
+/* IE7 workaround (opacity disabled) */
+*+html .ui-state-disabled, *+html .ui-state-disabled a { color: silver; }
+
+/*Class Tabella*/
+table.stiletabella thead td,table.stiletabella thead th {text-align: left;font-weight: bold;background-color:#EAF5F7}
