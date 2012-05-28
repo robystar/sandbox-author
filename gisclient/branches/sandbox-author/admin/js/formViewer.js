@@ -1,10 +1,9 @@
 function formViewer(optConf) {
-	
 	this.getStructure = function(){
 		
 	};
 	
 	
-	this.options=optConf;
-	console.log(this.options);
+	if(typeof(optConf) == 'undefined') alert('error');
+	//console.log(this.options);
 }
