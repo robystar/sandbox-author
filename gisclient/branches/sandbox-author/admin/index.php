@@ -8,7 +8,7 @@ header("Cache-Control: no-cache, must-revalidate, private, pre-check=0, post-che
 header("Expires: " . gmdate('D, d M Y H:i:s', time()) . " GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Pragma: no-cache");
-require_once ADMIN_PATH."lib/form.class.php";
+require_once ROOT_PATH."lib/form.class.php";
 
 $frm=new Form("layer","form","view");
 

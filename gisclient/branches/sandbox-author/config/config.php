@@ -80,7 +80,7 @@ define('REDLINE_FONT', 'arial'); // non obbligatorio, default arial
 //require_once (ROOT_PATH."lib/postgres.php");
 //require_once (ROOT_PATH."lib/debug.php");
 require_once (ROOT_PATH."config/config.db.php");
-require_once (ADMIN_PATH.'lib/gcapp.class.php');
+require_once (ROOT_PATH.'lib/gcapp.class.php');
 
 //Author
 //define('ADMIN_PATH',ROOT_PATH.'public/admin/');
