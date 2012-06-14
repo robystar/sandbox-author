@@ -1,9 +1,9 @@
 <?php
 
 //Impostazioni database Postgresql
-define('DB_NAME', 'geoweb_genova');
-define('DB_SCHEMA', 'gisclient_31');
-define('USER_SCHEMA', 'gisclient_31');
+define('DB_NAME', 'gisclient_demo');
+define('DB_SCHEMA', 'gisclient_35');
+define('USER_SCHEMA', 'gisclient_35');
 define('CHAR_SET', 'UTF-8');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '5432');

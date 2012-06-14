@@ -242,7 +242,7 @@ class GCAuthor {
 				$otherFields="";
 				if(!empty($dataStore["fields"])) for($i=0;$i<count($dataStore["fields"]);$i++) $fieldList[]='"'.$dataStore["fields"][$i].'"';
 				if (@count($fieldList)) $otherFields=",".implode(",",$fieldList);
-				$sql="SELECT ".$dataStore["valueField"]." as value,".$dataStore["displayField"]." as label $otherFields FROM gisclient_31.".$dataStore["table"].";";
+				$sql="SELECT ".$dataStore["valueField"]." as value,".$dataStore["displayField"]." as label $otherFields FROM gisclient_35.".$dataStore["table"].";";
 				$stmt=$db->prepare($sql);
 				$stmt->execute();
 				$result[$key]=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -250,6 +250,7 @@ class GCAuthor {
 		}
 		return json_encode($result);
 	}
+	
 	public static function getTabDir() {
 		$lang = self::getLang();
 		$rel_dir="config/ini/forms/";
