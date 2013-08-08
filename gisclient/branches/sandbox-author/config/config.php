@@ -37,7 +37,7 @@ define('LONG_EXECUTION_MEMORY','512M');
 
 
 /*******************Installation path *************************/
-define('ROOT_PATH','D:/ms4w/apps/sviluppo/author-dev/');
+define('ROOT_PATH','/ms4w/apps/sandbox-author/');
 define('ADMIN_PATH',ROOT_PATH.'admin/');
 define('PUBLIC_URL', 'http://dev.becrux/author-dev/admin/');
 define('MAP_URL', 'http://localhost/gisclientmaps/template/');
@@ -80,7 +80,7 @@ define('REDLINE_FONT', 'arial'); // non obbligatorio, default arial
 //require_once (ROOT_PATH."lib/postgres.php");
 //require_once (ROOT_PATH."lib/debug.php");
 require_once (ROOT_PATH."config/config.db.php");
-require_once (ROOT_PATH.'lib/gcapp.class.php');
+require_once (ADMIN_PATH.'lib/gcapp.class.php');
 
 //Author
 //define('ADMIN_PATH',ROOT_PATH.'public/admin/');
